@@ -6,20 +6,9 @@ import {
   FunctionField,
 } from "react-admin";
 
-const PostPanel = () => {
-  return <div>Hello</div>;
-};
-
 const PostList = () => (
   <List>
-    <Datagrid
-      expand={<PostPanel />}
-      sx={{
-        "& .RaDatagrid-headerCell": {
-          padding: "16px",
-        },
-      }}
-    >
+    <Datagrid>
       <TextField source="id" />
       <TextField source="title" label="Post Title" />
       <FunctionField
