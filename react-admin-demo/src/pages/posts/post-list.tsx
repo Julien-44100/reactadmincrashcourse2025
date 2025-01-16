@@ -1,12 +1,12 @@
-import { Datagrid, List, ReferenceField, TextField } from "react-admin";
+import { Datagrid, List, ReferenceField, TextField, FunctionField } from "react-admin";
 
 const PostList = () => (
   <List>
     <Datagrid>
-      <ReferenceField source="userId" reference="users" />
       <TextField source="id" />
-      <TextField source="title" />
-      <TextField source="body" />
+      <TextField source="title" label=" Post title" />
+        <FunctionField label="Excerpt" render={(record) => }/>
+      <ReferenceField source="userId" reference="users" />
     </Datagrid>
   </List>
 );
